@@ -123,7 +123,7 @@ def date_time(date, formats):                   #helper methods to validate date
     for format in formats:
         formatted_date = check_date(date, format)
         if formatted_date is not None:
-            return formatted_date.date()
+            return formatted_date.date().strftime('%Y-%m-%d')
     return None
 
 

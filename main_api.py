@@ -3,10 +3,14 @@ from rekognitionCode import detect_text
 from helper import date_formatter
 import boto3
 import re
-import cv2
 import base64
 
 app = Flask(__name__)
+
+
+@app.route('/')
+def welcome():
+    return "<h1>welcome! please use post method or client program provided to detext expenes date</h1>"
 
 @app.route('/extract_date', methods = ['post'])
 def call_rekognition():
